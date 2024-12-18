@@ -45,4 +45,8 @@ public class CubeSpeed : MonoBehaviour
     {
         transform.position += new Vector3(-0.1f, 0f, 0f) * MoveSpeed * Time.deltaTime;
     }
+    public virtual void Interact3()
+    {
+        transform.position += new Vector3(0f, -0.2f, 0f) * MoveSpeed * Time.deltaTime;
+    }
 }

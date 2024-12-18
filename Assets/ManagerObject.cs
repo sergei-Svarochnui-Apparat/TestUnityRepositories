@@ -8,11 +8,13 @@ public class ManagerObject : MonoBehaviour
     public GameObject sphere1;
     public GameObject Cube;
     public GameObject Cylinder;
+    public GameObject shpere2;
 
     private CubeSpeed moveCube;
     private MoveSphere moveSphere;
     private CubeSpeed moveSphere1;
     private CubeSpeed moveCylinder;
+    private CubeSpeed moveshpere2;
 
 
     void Start()
@@ -21,6 +23,7 @@ public class ManagerObject : MonoBehaviour
         moveSphere = sphere.GetComponent<MoveSphere>();
         moveSphere1 = sphere1.GetComponent<CubeSpeed>();
         moveCylinder = Cylinder.GetComponent<CubeSpeed>();
+        moveshpere2 = shpere2.GetComponent<CubeSpeed>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,10 @@ public class ManagerObject : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             moveCylinder.Interact2();
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            moveshpere2.Interact3();
         }
     }
 }
